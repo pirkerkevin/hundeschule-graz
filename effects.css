@@ -1,0 +1,64 @@
+/* ======================================
+   Effects.css — sanfte Reveal/Parallax
+   respektiert prefers-reduced-motion
+   ====================================== */
+
+/* Grundzustand: unsichtbar/leicht verschoben */
+.fx-reveal,
+.fx-up,
+.fx-fade,
+.fx-scale,
+.fx-stagger > * {
+  opacity: 0;
+  transform: translateY(14px);
+  will-change: opacity, transform;
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+/* Standard-Reveal */
+.fx-reveal.is-in,
+.fx-up.is-in,
+.fx-fade.is-in,
+.fx-scale.is-in,
+.fx-stagger.is-in > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Varianten */
+.fx-fade { transform: none; }
+.fx-scale { transform: scale(.985); }
+.fx-scale.is-in { transform: scale(1); }
+
+/* Stagger: Kinder versetzt einblenden */
+.fx-stagger.is-in > * {
+  transition-delay: var(--fx-delay, 0ms);
+}
+.fx-stagger.is-in > *:nth-child(1)  { --fx-delay: 40ms; }
+.fx-stagger.is-in > *:nth-child(2)  { --fx-delay: 90ms; }
+.fx-stagger.is-in > *:nth-child(3)  { --fx-delay: 140ms; }
+.fx-stagger.is-in > *:nth-child(4)  { --fx-delay: 190ms; }
+.fx-stagger.is-in > *:nth-child(5)  { --fx-delay: 240ms; }
+.fx-stagger.is-in > *:nth-child(6)  { --fx-delay: 290ms; }
+.fx-stagger.is-in > *:nth-child(7)  { --fx-delay: 340ms; }
+.fx-stagger.is-in > *:nth-child(8)  { --fx-delay: 390ms; }
+
+/* Parallax-Header (optional Klasse .parallax) */
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Reduced motion: Effekte deaktivieren */
+@media (prefers-reduced-motion: reduce) {
+  .fx-reveal,
+  .fx-up,
+  .fx-fade,
+  .fx-scale,
+  .fx-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Hauptseiten -->
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/</loc>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/blog/</loc>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/faq.html</loc>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/ueber-uns/</loc>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/kontakt.html</loc>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/gutscheine.html</loc>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/shop/cart.html</loc>
+  </url>
+
+  <!-- Blogposts -->
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/blog/posts/welpentraining-graz-leitfaden.html</loc>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/blog/posts/leinenfuehrigkeit-graz-routen.html</loc>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/blog/posts/hundespaziergaenge-graz.html</loc>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/blog/posts/hund-und-kinder.html</loc>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/blog/posts/tierarzttraining.html</loc>
+  </url>
+
+  <!-- Leistungsseiten -->
+  <url><loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/welpentraining.html</loc></url>
+  <url><loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/junghunde.html</loc></url>
+  <url><loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/einzeltraining.html</loc></url>
+  <url><loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/gruppenkurse.html</loc></url>
+  <url><loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/alltagstraining.html</loc></url>
+  <url><loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/verhaltensberatung.html</loc></url>
+
+</urlset>

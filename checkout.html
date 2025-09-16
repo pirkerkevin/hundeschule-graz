@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kasse – Kevin’s Hundeschule Graz</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="../assets/ui.css?v=6">
+  <style>
+    .checkout{display:grid;gap:18px;grid-template-columns:1fr}
+    @media(min-width:980px){.checkout{grid-template-columns:1fr 360px}}
+    .panel{background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:16px}
+    .row{display:grid;grid-template-columns:1fr auto auto auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px dashed var(--border)}
+    .row:last-child{border-bottom:0}
+    .muted{color:#666}
+    .qty{display:inline-flex;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+    .qty button{border:0;background:#fff;padding:6px 10px;cursor:pointer}
+    .qty input{width:48px;text-align:center;border:0}
+    .trash{background:transparent;border:0;cursor:pointer;font-size:1rem}
+    .paylist{display:grid;gap:10px}
+    .payopt{display:flex;align-items:center;gap:12px;border:1px solid var(--border);border-radius:12px;padding:10px;background:#fff;cursor:pointer}
+    .payopt input{accent-color:var(--brand)}
+    .logos{display:flex;gap:8px;align-items:center}
+    .logo{border:1px solid var(--border);background:#fff;border-radius:6px;padding:4px 6px;font-size:.85rem;line-height:1}
+    .sumline{display:flex;justify-content:space-between;margin:.25rem 0}
+    .sumline strong{font-weight:700}
+    .smallnote{font-size:.9rem;color:#666}
+  </style>
+</head>
+<body>
+<a href="#start" class="skip-link">Zum Inhalt springen</a>
+<header class="wrapper site-header">
+  <nav class="nav"><a class="brand" href="../index.html">Kevin’s Hundeschule Graz</a>
+    <div>
+      <a class="cart-icon" href="checkout.html" aria-label="Warenkorb öffnen">🛒<span class="cart-badge" id="cartBadge">0</span></a>
+      <button class="menu-toggle" aria-label="Menü öffnen" aria-controls="quick-menu" aria-expanded="false"><span class="menu-bars"></span></button>
+    </div>
+    <div id="quick-menu" class="quick-menu" hidden><ul>
+      <li><a href="../index.html">Start</a></li><li><a href="../leistungen/index.html">Leistungen</a></li>
+      <li><a href="../blog/index.html">Blog</a></li><li><a href="../faq.html">FAQ</a></li>
+      <li><a href="../ueber-uns/index.html">Über uns</a></li><li><a href="../gutscheine.html">Gutscheine</a></li>
+      <li><a href="../shop/checkout.html">Kasse</a></li><li><a href="../kontakt.html">Kontakt</a></li>
+    </ul></div>
+  </nav>
+</header>
+
+<main class="wrapper section" id="start">
+  <h1 style="text-align:center">Kasse</h1>
+  <div class="checkout">
+    <!-- Linke Spalte: Artikel -->
+    <section class="panel">
+      <h2 style="margin-top:0">Deine Artikel</h2>
+      <div id="items"></div>
+      <p class="smallnote">Hinweis: Gutscheine werden digital per E-Mail zugestellt.</p>
+    </section>
+
+    <!-- Rechte Spalte: Zahlung -->
+    <aside class="panel">
+      <h2 style="margin-top:0">Zahlung</h2>
+      <div class="paylist" id="paylist">
+        <label class="payopt"><input type="radio" name="pay" value="apple" checked> <div class="logos"><span class="logo"> Pay</span></div></label>
+        <label class="payopt"><input type="radio" name="pay" value="card"> <div class="logos"><span class="logo">VISA</span><span class="logo">Mastercard</span><span class="logo">Maestro</span></div></label>
+        <label class="payopt"><input type="radio" name="pay" value="paypal"> <div class="logos"><span class="logo">PayPal</span></div></label>
+        <label class="payopt"><input type="radio" name="pay" value="klarna"> <div class="logos"><span class="logo">Klarna</span></div></label>
+      </div>
+
+      <div style="margin-top:12px">
+        <div class="sumline"><span>Zwischensumme</span><strong id="sum-sub">0,00 €</strong></div>
+        <div class="sumline" id="sum-disc-wrap" style="display:none"><span>Rabatt</span><strong id="sum-disc">–0,00 €</strong></div>
+        <div class="sumline"><span>Gesamt (inkl. USt.)</span><strong id="sum-total">0,00 €</strong></div>
+      </div>
+
+      <label class="small" style="display:flex;gap:10px;margin:10px 0">
+        <input type="checkbox" id="consent" required> Ich akzeptiere die <a href="../agb.html" target="_blank" rel="noopener">AGB</a> und die <a href="../datenschutz.html" target="_blank" rel="noopener">Datenschutz&shy;hinweise</a>.
+      </label>
+
+      <button class="cta-primary" id="btn-pay" style="width:100%">Jetzt bestellen</button>
+      <p class="smallnote" style="margin-top:8px">Sichere Abwicklung. Du erhältst im Anschluss eine Bestätigung.</p>
+    </aside>
+  </div>
+</main>
+
+<footer class="wrapper"><small>© 2025 Kevin’s Hundeschule Graz · <a href="../impressum.html">Impressum</a> · <a href="../agb.html">AGB</a> · <a href="../datenschutz.html">Datenschutz</a></small></footer>
+
+<script src="../assets/menu.js?v=6" defer></script>
+
+<script>
+/* Warenkorb-Logik (statisch) */
+const KEY='cart_items', PKEY='cart_promo';
+function load(){ try{return JSON.parse(localStorage.getItem(KEY))||[]}catch(e){return[]} }
+function save(x){ localStorage.setItem(KEY, JSON.stringify(x)); syncBadge(); }
+function fmt(n){ return Number(n||0).toLocaleString('de-AT',{minimumFractionDigits:2,maximumFractionDigits:2}) }
+function promo(){ try{return JSON.parse(localStorage.getItem(PKEY))}catch(e){return null} }
+function syncBadge(){
+  const b=document.getElementById('cartBadge'); if(!b) return;
+  const items=load(); const total=items.reduce((s,it)=>s+(it.qty||1),0);
+  b.textContent=total; b.style.display=total>0?'':'none';
+}
+
+const elItems=document.getElementById('items');
+const elSub=document.getElementById('sum-sub');
+const elDisc=document.getElementById('sum-disc');
+const elDiscWrap=document.getElementById('sum-disc-wrap');
+const elTotal=document.getElementById('sum-total');
+
+function render(){
+  const items=load();
+  if(items.length===0){ elItems.innerHTML='<p class="small">Dein Warenkorb ist leer. <a href="../gutscheine.html">Weiter shoppen</a></p>'; calc(); return; }
+  elItems.innerHTML=`
+    <div class="row muted"><div>Artikel</div><div>Preis</div><div>Menge</div><div></div></div>
+    ${items.map((it,idx)=>`
+      <div class="row">
+        <div>${it.name}</div>
+        <div>${fmt(it.price)} €</div>
+        <div class="qty">
+          <button aria-label="–" onclick="chg(${idx},-1)">–</button>
+          <input value="${it.qty||1}" readonly>
+          <button aria-label="+" onclick="chg(${idx},1)">+</button>
+        </div>
+        <button class="trash" aria-label="Entfernen" onclick="delItem(${idx})">🗑️</button>
+      </div>
+    `).join('')}
+  `;
+  calc();
+}
+function chg(i,d){ const items=load(); if(!items[i])return; items[i].qty=Math.max(1,(items[i].qty||1)+d); save(items); render(); }
+function delItem(i){ const items=load(); items.splice(i,1); save(items); render(); }
+
+function calc(){
+  const items=load();
+  const sub=items.reduce((s,it)=>s+(it.price*(it.qty||1)),0);
+  const p=promo(); const disc = p && p.pct ? sub*p.pct : 0;
+  elSub.textContent=fmt(sub)+' €';
+  if(disc>0){ elDiscWrap.style.display=''; elDisc.textContent='–'+fmt(disc)+' €'; } else { elDiscWrap.style.display='none'; }
+  elTotal.textContent=fmt(Math.max(0,sub-disc))+' €';
+}
+
+document.getElementById('btn-pay').addEventListener('click', ()=>{
+  if(!document.getElementById('consent').checked){
+    alert('Bitte AGB und Datenschutz bestätigen.'); return;
+  }
+  // Zahlart lesen (nur zur Anzeige)
+  const pay = document.querySelector('input[name="pay"]:checked')?.value || 'card';
+  // Simulierter Checkout: leite auf Erfolg um und hänge Gesamtbetrag an
+  const total = elTotal.textContent.replace(/\s/g,'');
+  const url = new URL('./erfolg.html', location.href);
+  url.searchParams.set('amount', total);
+  url.searchParams.set('method', pay);
+  location.href = url.toString();
+});
+
+syncBadge(); render();
+</script>
+<script src="../assets/cart.js" defer></script>
+</body>
+</html>

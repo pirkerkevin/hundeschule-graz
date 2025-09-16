@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDT465YDT4"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js',new Date()); gtag('config','G-EDT465YDT4');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gutscheine & Blöcke – Kevin’s Hundeschule Graz</title>
+  <meta name="description" content="Gutscheine, 5er- und 10er-Blöcke für Hundetraining in Graz – flexibel einlösbar. Jetzt sichern und später Termine wählen.">
+  <link rel="stylesheet" href="./assets/ui.css?v=6">
+  <link rel="stylesheet" href="./assets/effects.css">
+  <style>
+    .grid{display:grid;gap:16px}
+    @media(min-width:760px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:1040px){.grid{grid-template-columns:repeat(3,1fr)}}
+    .prod{background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:16px;display:flex;flex-direction:column;gap:8px}
+    .prod h3{margin:.25rem 0}
+    .price{font-size:1.25rem;font-weight:700}
+    .badge{display:inline-block;background:var(--brand-weak,#eef7ff);color:var(--brand,#0a66c2);border-radius:999px;padding:.25rem .6rem;font-size:.85rem}
+    .prod .meta{color:#666;font-size:.95rem}
+    .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:16px;background:#0b5; color:#fff; padding:10px 14px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.2);display:none;z-index:9999}
+    .toast a{color:#fff;text-decoration:underline}
+  </style>
+</head>
+<body>
+<a href="#start" class="skip-link">Zum Inhalt springen</a>
+
+<header class="wrapper site-header">
+  <nav class="nav" aria-label="Hauptnavigation">
+    <a class="brand" href="./index.html">Kevin’s Hundeschule Graz</a>
+    <div>
+      <!-- 🛒 Warenkorb-Badge -->
+      <a class="cart-icon" href="./shop/checkout.html" aria-label="Warenkorb öffnen">
+        🛒<span class="cart-badge" id="cartBadge">0</span>
+      </a>
+      <button class="menu-toggle" aria-label="Menü öffnen" aria-controls="quick-menu" aria-expanded="false">
+        <span class="menu-bars"></span>
+      </button>
+    </div>
+    <div id="quick-menu" class="quick-menu" hidden>
+      <ul>
+        <li><a href="./index.html">Start</a></li>
+        <li><a href="./leistungen/index.html">Leistungen</a></li>
+        <li><a href="./blog/index.html">Blog</a></li>
+        <li><a href="./faq.html">FAQ</a></li>
+        <li><a href="./ueber-uns/index.html">Über uns</a></li>
+        <li><a href="./gutscheine.html" aria-current="page">Gutscheine</a></li>
+        <li><a href="./shop/cart.html">Warenkorb</a></li>
+        <li><a href="./kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="start" class="wrapper section">
+  <header class="section-head fx-reveal">
+    <h1>Gutscheine & Blöcke</h1>
+    <p class="section-desc">Flexibel einlösen – ideal zum Dranbleiben oder als Geschenk.</p>
+  </header>
+
+  <section class="grid fx-reveal" aria-label="Produkte">
+    <!-- 10er-Block -->
+    <article class="prod">
+      <span class="badge">Beliebt</span>
+      <h3>10er-Block Training</h3>
+      <p class="meta">10 Einheiten à ~60 Min · flexibel kombinierbar (Einzel/Gruppe)</p>
+      <div class="price" data-price="490">€ 490,00</div>
+      <button class="cta-primary" data-id="block10" data-name="10er-Block Training" data-price="490">In den Warenkorb</button>
+      <p class="small">Ideal zum Dranbleiben, übertragbar innerhalb der Familie.</p>
+    </article>
+
+    <!-- 5er-Block -->
+    <article class="prod">
+      <h3>5er-Block Training</h3>
+      <p class="meta">5 Einheiten à ~60 Min · flexibel einsetzbar</p>
+      <div class="price" data-price="270">€ 270,00</div>
+      <button class="cta-primary" data-id="block5" data-name="5er-Block Training" data-price="270">In den Warenkorb</button>
+      <p class="small">Guter Einstieg für klare Fortschritte.</p>
+    </article>
+
+    <!-- Einzelstunde -->
+    <article class="prod">
+      <h3>Einzeltraining (1×)</h3>
+      <p class="meta">~60 Min · vor Ort in Graz (mobil)</p>
+      <div class="price" data-price="80">€ 80,00</div>
+      <button class="cta-primary" data-id="single1" data-name="Einzeltraining (1×)" data-price="80">In den Warenkorb</button>
+      <p class="small">Für gezielte Themen oder als Start.</p>
+    </article>
+
+    <!-- Welpenkurs -->
+    <article class="prod">
+      <h3>Welpentraining – Kurs</h3>
+      <p class="meta">6 Termine à 50–60 Min · kleine Gruppe</p>
+      <div class="price" data-price="330">€ 330,00</div>
+      <button class="cta-primary" data-id="kurs-welpe" data-name="Welpentraining – Kurs" data-price="330">In den Warenkorb</button>
+      <p class="small">Strukturierter Start in den Alltag.</p>
+    </article>
+
+    <!-- Junghundekurs -->
+    <article class="prod">
+      <h3>Junghundetraining – Kurs</h3>
+      <p class="meta">6 Termine à 60 Min · kleine Gruppe</p>
+      <div class="price" data-price="360">€ 360,00</div>
+      <button class="cta-primary" data-id="kurs-junghund" data-name="Junghundetraining – Kurs" data-price="360">In den Warenkorb</button>
+      <p class="small">Pubertät gelassen meistern.</p>
+    </article>
+
+    <!-- Wertgutschein 50 -->
+    <article class="prod">
+      <span class="badge">Geschenk</span>
+      <h3>Wertgutschein € 50</h3>
+      <p class="meta">Für alle Leistungen einlösbar</p>
+      <div class="price" data-price="50">€ 50,00</div>
+      <button class="cta-primary" data-id="g50" data-name="Wertgutschein € 50" data-price="50">In den Warenkorb</button>
+      <p class="small">Perfekt zum Verschenken.</p>
+    </article>
+
+    <!-- Wertgutschein 100 -->
+    <article class="prod">
+      <h3>Wertgutschein € 100</h3>
+      <p class="meta">Für alle Leistungen einlösbar</p>
+      <div class="price" data-price="100">€ 100,00</div>
+      <button class="cta-primary" data-id="g100" data-name="Wertgutschein € 100" data-price="100">In den Warenkorb</button>
+      <p class="small">Beliebter Betrag für Kurse & Blöcke.</p>
+    </article>
+  </section>
+
+  <p class="small" style="margin-top:12px">
+    Alle Preise inkl. USt. · Gutscheine werden digital per E-Mail zugestellt. Einlösung nach Verfügbarkeit; Terminabstimmung im Erstgespräch.
+  </p>
+
+  <p style="margin-top:16px">
+    <a class="cta" href="./shop/cart.html">Warenkorb ansehen</a>
+    <a class="cta-primary" href="./shop/checkout.html">Zur Kasse</a>
+  </p>
+</main>
+
+<footer class="wrapper" role="contentinfo">
+  <small>© 2025 Kevin’s Hundeschule Graz · <a href="./impressum.html">Impressum</a> · <a href="./agb.html">AGB</a> · <a href="./datenschutz.html">Datenschutz</a></small>
+</footer>
+
+<!-- Scripts: immer vor </body> -->
+<script src="./assets/menu.js?v=6" defer></script>
+<script src="./assets/effects.js" defer></script>
+<script src="./assets/cart.js?v=1" defer></script>
+<script>
+/* --- Add-to-Cart (LocalStorage) ----------------------------------------- */
+(function(){
+  const KEY='cart_items';
+  function load(){ try{return JSON.parse(localStorage.getItem(KEY))||[]}catch(e){return[]} }
+  function save(items){
+    localStorage.setItem(KEY, JSON.stringify(items));
+    // Badge lokal aktualisieren (zusätzlich zu cart.js, das auch reagiert)
+    const b=document.getElementById('cartBadge');
+    if(b){
+      const total=items.reduce((s,it)=>s+(it.qty||1),0);
+      b.textContent=total; b.style.display= total>0 ? '' : 'none';
+    }
+    // Storage-Event für andere Tabs/Skripte triggern
+    localStorage.setItem('__cart_ping__', String(Date.now()));
+  }
+  function addItem({id,name,price}){
+    const items = load();
+    const idx = items.findIndex(i=>i.id===id);
+    if(idx>-1){ items[idx].qty = (items[idx].qty||1)+1; }
+    else { items.push({id,name,price:Number(price),qty:1}); }
+    save(items);
+    showToast(`${name} wurde zum Warenkorb hinzugefügt. <a href="./shop/cart.html">Zum Warenkorb</a>`);
+  }
+  function onAddClick(e){
+    const btn = e.target.closest('button[data-id]');
+    if(!btn) return;
+    const id = btn.getAttribute('data-id');
+    const name = btn.getAttribute('data-name');
+    const price = Number(btn.getAttribute('data-price'));
+    if(!id||!name||!price){ return; }
+    addItem({id,name,price});
+  }
+  function showToast(html){
+    let t = document.querySelector('.toast');
+    if(!t){
+      t = document.createElement('div');
+      t.className='toast';
+      document.body.appendChild(t);
+    }
+    t.innerHTML = html;
+    t.style.display='block';
+    clearTimeout(t._tm);
+    t._tm = setTimeout(()=>{ t.style.display='none'; }, 2200);
+  }
+
+  // Delegate auf die ganze Seite (alle Add-to-Cart Buttons)
+  document.addEventListener('click', onAddClick);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDT465YDT4"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-EDT465YDT4');</script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blog – Hundeschule Graz</title>
+  <meta name="description" content="Magazin der Hundeschule Graz: Welpentraining, Leinenführigkeit, Spaziergänge und Verhaltensberatung – praxisnah, modern, lokal.">
+  <link rel="stylesheet" href="../assets/ui.css?v=6">
+  <link rel="stylesheet" href="assets/effects.css">
+  <style>
+    .blog-hero{background:var(--bg-2);border-bottom:1px solid var(--border)}
+    .blog-hero .inner{max-width:1100px;margin:0 auto;padding:32px 16px;text-align:center}
+    .grid-cards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:28px}
+    .bcard{display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--border);border-radius:16px;background:var(--card);box-shadow:var(--shadow);padding:18px;transition:transform .2s}
+    .bcard:hover{transform:translateY(-2px)}
+    .bcard h3{margin:.4rem 0}
+    .bcard p.excerpt{color:#444;margin-bottom:.6rem}
+    .newsletter-card{max-width:600px;margin:40px auto;border:1px solid var(--border);border-radius:18px;background:var(--card);box-shadow:var(--shadow);padding:24px;text-align:center}
+    .newsletter-card form{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+    .newsletter-card input[type=email]{padding:.7rem .9rem;border:1px solid var(--border);border-radius:10px;width:100%}
+  </style>
+</head>
+<body>
+<a href="#start" class="skip-link">Zum Inhalt springen</a>
+
+<header class="wrapper site-header">
+  <nav class="nav" aria-label="Hauptnavigation">
+    <a class="brand" href="../index.html">Kevin’s Hundeschule Graz</a>
+    <button class="menu-toggle" aria-label="Menü öffnen" aria-controls="quick-menu" aria-expanded="false">
+      <span class="menu-bars"></span>
+    </button>
+    <div id="quick-menu" class="quick-menu" hidden>
+      <ul>
+        <li><a href="../index.html">Start</a></li>
+        <li><a href="../leistungen/index.html">Leistungen</a></li>
+        <li><a href="../blog/index.html" aria-current="page">Blog</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../ueber-uns/index.html">Über uns</a></li>
+        <li><a href="../gutscheine.html">Gutscheine</a></li>
+        <li><a href="../shop/cart.html">Warenkorb</a></li>
+        <li><a href="../kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<section class="blog-hero">
+  <div class="inner">
+    <h1>Blog – Magazin der Hundeschule Graz</h1>
+    <p>Praxisnah, modern und lokal: Welpen, Alltag, Spaziergänge & Verhaltensberatung – so wird euer Training in Graz alltagstauglich.</p>
+  </div>
+</section>
+
+<main id="start" class="wrapper">
+  <div class="grid-cards reveal-stagger">
+    <a class="bcard" href="posts/welpentraining-graz.html">
+      <h3>Welpentraining in Graz – Schritt für Schritt zum entspannten Alltag</h3>
+      <p class="excerpt">Vom Leechwald bis zur Murpromenade: So baust du Orientierung, Rückruf und Ruhe in der Stadt auf – ohne deinen Welpen zu überfordern.</p>
+      <span class="cta" style="align-self:flex-start">Zum Artikel</span>
+    </a>
+
+    <a class="bcard" href="posts/leinenfuehrigkeit-graz.html">
+      <h3>Leinenführigkeit in Graz – entspannt unterwegs in der Stadt</h3>
+      <p class="excerpt">Locker laufen statt ziehen: Orientierung, Timing und Management – mit passenden Orten in Graz für jeden Trainingsschritt.</p>
+      <span class="cta" style="align-self:flex-start">Zum Artikel</span>
+    </a>
+
+    <a class="bcard" href="posts/hundespaziergaenge-graz.html">
+      <h3>Die schönsten Hundespaziergänge in Graz – Training &amp; Erholung verbinden</h3>
+      <p class="excerpt">Sieben Routen vom Leechwald bis zur Mur – mit konkreten Ideen für Rückruf, Begegnungen, Ruhe und Blickarbeit.</p>
+      <span class="cta" style="align-self:flex-start">Zum Artikel</span>
+    </a>
+
+    <a class="bcard" href="posts/verhaltensberatung-graz.html">
+      <h3>Verhaltensberatung in Graz – Hilfe bei Angst, Stress &amp; Aggression</h3>
+      <p class="excerpt">Strukturiert, freundlich, messbar: So bearbeitest du Begegnungsstress, Unsicherheiten und Aggression im Stadtalltag.</p>
+      <span class="cta" style="align-self:flex-start">Zum Artikel</span>
+    </a>
+  </div>
+
+  <section class="newsletter-card reveal">
+    <h2 style="margin-top:0">Newsletter: Exklusive Angebote &amp; Tipps für Fellnasen</h2>
+    <p>Kurz, praxisnah und selten: Trainingsideen, Kurs-News und Aktionen. Du kannst dich jederzeit abmelden.</p>
+    <form method="post" action="mailto:kevin.pirker10@gmail.com" enctype="text/plain">
+      <label for="news-email" class="visually-hidden">E-Mail-Adresse</label>
+      <input id="news-email" name="email" type="email" required placeholder="deine@email.at" autocomplete="email" spellcheck="false">
+      <button class="cta-primary" type="submit">Jetzt anmelden</button>
+    </form>
+  </section>
+</main>
+
+<footer class="wrapper" role="contentinfo">
+  <small>© 2025 Kevin’s Hundeschule Graz · <a href="../impressum.html">Impressum</a> · <a href="../agb.html">AGB</a> · <a href="../datenschutz.html">Datenschutz</a></small>
+</footer>
+
+<script src="../assets/menu.js?v=6" defer></script>
+  <script src="assets/effects.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bestellung erfolgreich – Kevin’s Hundeschule Graz</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="../assets/ui.css?v=6">
+  <style>
+    .success{max-width:760px;margin:40px auto;background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:20px;text-align:center}
+  </style>
+</head>
+<body>
+<main class="wrapper section">
+  <section class="success">
+    <h1>Danke für deine Bestellung! 🐾</h1>
+    <p>Wir haben deine Angaben erhalten. Du bekommst in Kürze eine Bestätigung per E-Mail mit den nächsten Schritten.</p>
+    <p style="margin-top:10px"><strong>Gesamtbetrag:</strong> <span id="sum">–</span><br><strong>Zahlart:</strong> <span id="method">–</span></p>
+    <p class="small" style="max-width:62ch;margin:12px auto 0">
+      Hinweis: Zahlungen werden nach Bestätigung **sicher** abgewickelt (ohne Speicherung von Zahlungsdaten auf dieser Website).
+    </p>
+    <p style="margin-top:16px"><a class="cta-primary" href="../index.html">Zurück zur Startseite</a></p>
+  </section>
+</main>
+<script>
+(function(){
+  const p=new URLSearchParams(location.search);
+  document.getElementById('sum').textContent = p.get('amount') || '—';
+  const m = p.get('method');
+  const label = m==='apple'?'Apple Pay':m==='paypal'?'PayPal':m==='klarna'?'Klarna':'Karte';
+  document.getElementById('method').textContent = label;
+  // Optional: Warenkorb leeren
+  localStorage.removeItem('cart_items'); localStorage.removeItem('cart_promo');
+})();
+</script>
+</body>
+</html>

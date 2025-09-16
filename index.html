@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDT465YDT4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-EDT465YDT4');
+  </script>
+  <meta name="google-site-verification" content="zITrQxOiMLZHTu2F2_npQ37rC1xvX9Ks5Df3_C6mgMI" />
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kevin’s Hundeschule Graz – Welpentraining, Alltag & Einzeltraining</title>
+  <meta name="description" content="Welpentraining, Junghunde-, Alltags- & Einzeltraining – freundlich, modern und alltagstauglich. Kleine Gruppen, klare Pläne, mobile Termine.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== Base (Boho) ===== */
+    :root{
+      --brand:#7a5c52; --brand-light:#a88d81;
+      --bg:#faf9f7; --bg-2:#f2efec; --card:#fff;
+      --text:#2b2b2b; --border:#d8d3cf;
+      --shadow:0 6px 16px rgba(0,0,0,.06);
+      --space-1:8px; --space-2:12px; --space-3:16px; --space-4:24px; --space-5:32px; --space-6:48px; --space-7:72px;
+      --radius-xl:22px; --radius-lg:16px; --radius-md:12px;
+    }
+    *,:before,:after{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6}
+    img{max-width:100%;display:block;height:auto}
+    h1,h2,h3,h4{font-family:"Playfair Display",serif;line-height:1.2;color:var(--text)}
+    h1{font-size:clamp(28px,3.4vw,40px);margin:.5rem 0}
+    h2{font-size:clamp(22px,2.4vw,30px);margin:1rem 0 .5rem}
+    h3{font-size:clamp(18px,1.7vw,22px);margin:.5rem 0}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrapper{max-width:1200px;margin:0 auto;padding:0 1rem}
+    .section{padding:var(--space-6) 0}
+    .section-narrow{padding:var(--space-5) 0}
+    .section-head{text-align:center;margin-bottom:var(--space-4)}
+    .section-desc{max-width:70ch;margin:.5rem auto 0;color:#4a4a4a}
+
+    /* Buttons */
+    .cta,.cta-primary{cursor:pointer;display:inline-block;border-radius:10px;padding:.65rem 1.1rem;font-weight:600;transition:background .2s,color .2s,transform .08s;border:1px solid transparent}
+    .cta{background:var(--bg-2);color:var(--brand);border-color:var(--brand-light)}
+    .cta:hover{background:var(--brand-light);color:#fff}
+    .cta-primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+    .cta-primary:hover{background:var(--brand-light);border-color:var(--brand-light)}
+    .badge{display:inline-block;background:#fff;color:var(--brand);padding:.3rem .6rem;border-radius:8px;font-size:.85rem;font-weight:600}
+
+    /* Header / Nav */
+    .site-header{position:sticky;top:0;z-index:1100;background:rgba(250,249,247,.9);backdrop-filter:saturate(1.1) blur(6px);transition:background .25s ease, box-shadow .25s ease, border-color .25s ease;border-bottom:1px solid transparent}
+    .site-header.scrolled{background:rgba(250,249,247,.96);border-color:var(--border);box-shadow:0 4px 18px rgba(0,0,0,.06)}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:.8rem 0}
+    .brand{font-family:"Playfair Display",serif;font-weight:700;font-size:1.35rem;color:var(--brand)}
+    .menu-toggle{background:none;border:0;padding:.35rem;cursor:pointer}
+    .menu-bars{display:block;width:24px;height:2px;background:var(--brand);position:relative}
+    .menu-bars::before,.menu-bars::after{content:"";position:absolute;left:0;width:24px;height:2px;background:var(--brand)}
+    .menu-bars::before{top:-7px}.menu-bars::after{top:7px}
+    .quick-menu{position:absolute;right:1rem;top:60px;background:var(--card);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);padding:.6rem 1rem}
+    .quick-menu ul{list-style:none;margin:0;padding:0}
+    .quick-menu li{margin:.35rem 0}
+
+    /* Hero */
+    .hero{background:linear-gradient(180deg, var(--brand-light), #b99e93);color:#fff;padding:3rem 1rem 3.6rem;text-align:center}
+    .hero p{max-width:62ch;margin:.6rem auto 0}
+
+    /* Grids / Cards */
+    .grid{display:grid;gap:16px}
+    .grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.2rem;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:.35rem}
+    .card:hover{transform:translateY(-2px);transition:transform .2s}
+    .service-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .service-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-xl);box-shadow:var(--shadow);padding:18px;display:flex;flex-direction:column;gap:8px;transition:transform .2s}
+    .service-card:hover{transform:translateY(-2px)}
+
+    /* Marquee */
+    .brand-row{overflow:hidden;border:1px solid var(--border);background:var(--card);border-radius:var(--radius-xl);box-shadow:var(--shadow);padding:12px}
+    .marquee{display:flex;gap:28px;align-items:center;will-change:transform;animation:slide 28s linear infinite}
+    .marquee:hover{animation-play-state:paused}
+    .marquee .dot{height:32px;width:110px;border-radius:8px;background:var(--bg-2);border:1px solid var(--border)}
+    @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* Timeline */
+    .timeline{position:relative;display:grid;gap:16px}
+    .timeline::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--border)}
+    .step{position:relative;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:14px 14px 14px 38px;box-shadow:var(--shadow)}
+    .step::before{content:attr(data-step);position:absolute;left:-2px;top:12px;width:20px;height:20px;border-radius:50%;background:var(--brand);color:#fff;font-size:.8rem;display:grid;place-items:center}
+
+    /* KPIs */
+    .kpis{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+    .kpi{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:16px;text-align:center}
+    .kpi .num{font-family:"Playfair Display",serif;font-size:clamp(28px,4vw,40px);color:var(--brand)}
+
+    /* Teaser grid */
+    .teaser-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+    .teaser{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-xl);box-shadow:var(--shadow);padding:18px}
+    .teaser h3{margin:.4rem 0}
+
+    /* Testimonials slider */
+    .slider{position:relative;overflow:hidden}
+    .slide-track{display:flex;gap:16px;transition:transform .45s ease}
+    .slide{min-width:clamp(280px,92vw,520px);background:var(--card);border:1px solid var(--border);border-radius:var(--radius-xl);box-shadow:var(--shadow);padding:16px}
+    .slider-controls{display:flex;gap:8px;justify-content:center;margin-top:10px}
+    .slider-controls button{border:1px solid var(--border);background:#fff;border-radius:10px;padding:8px 12px;cursor:pointer}
+
+    /* Reveal (prefers-reduced-motion respected) */
+    @media (prefers-reduced-motion:no-preference){
+      .fx-reveal{opacity:0;transform:translateY(12px);transition:all .5s ease-out}
+      .fx-reveal.is-in{opacity:1;transform:none}
+    }
+
+    /* Footer */
+    footer{text-align:center;font-size:.9rem;padding:2rem 0;color:#666}
+
+    /* Accessibility */
+    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{left:0;top:0;width:auto;height:auto;background:#000;color:#fff;padding:.5rem}
+  </style>
+</head>
+<body>
+  <a href="#start" class="skip-link">Zum Inhalt springen</a>
+
+  <!-- Header -->
+  <header class="wrapper site-header" role="banner">
+    <nav class="nav" role="navigation" aria-label="Hauptnavigation">
+      <a class="brand" href="index.html" aria-label="Startseite">Kevin’s Hundeschule Graz</a>
+      <button class="menu-toggle" aria-label="Menü öffnen" aria-haspopup="true" aria-controls="quick-menu" aria-expanded="false">
+        <span class="menu-bars" aria-hidden="true"></span>
+      </button>
+      <div id="quick-menu" class="quick-menu" hidden>
+        <ul>
+          <li><a href="index.html">Start</a></li>
+          <li><a href="leistungen/index.html">Leistungen</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="ueber-uns/index.html">Über uns</a></li>
+          <li><a href="gutscheine.html">Gutscheine</a></li>
+          <li><a href="shop/cart.html">Warenkorb</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero fx-reveal">
+    <div class="wrapper">
+      <span class="badge">Graz & Umgebung</span>
+      <h1>Welpentraining & Hundetraining – modern & alltagstauglich</h1>
+      <p>Positive Verstärkung, kleine Gruppen und individuelle Trainingspläne. Vom Welpenkurs über Alltagstraining bis zur Verhaltensberatung.</p>
+      <p style="margin-top:12px">
+        <a class="cta-primary" href="kontakt.html#formular">Kostenloses Erstgespräch</a>
+        <a class="cta-primary" href="gutscheine.html">Gutschein verschenken</a>
+      </p>
+    </div>
+  </section>
+
+  <main id="start">
+    <!-- Logos Marquee -->
+    <section class="wrapper section fx-reveal" aria-label="Partner & Auszeichnungen">
+      <div class="brand-row">
+        <div class="marquee">
+          <div class="dot" aria-hidden="true"></div><div class="dot" aria-hidden="true"></div><div class="dot" aria-hidden="true"></div><div class="dot" aria-hidden="true"></div>
+          <!-- Duplikat für Endlosschleife -->
+          <div class="dot" aria-hidden="true"></div><div class="dot" aria-hidden="true"></div><div class="dot" aria-hidden="true"></div><div class="dot" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leistungen -->
+    <section class="wrapper section">
+  <header class="section-head fx-reveal">
+    <h2>Leistungen</h2>
+    <p class="section-desc">Kleine Gruppen, klare Pläne, mobile Termine – Training, das in euren Alltag passt.</p>
+  </header>
+
+  <div class="service-grid fx-reveal">
+    <a class="service-card" href="leistungen/welpentraining.html">
+      <h3>Welpentraining</h3>
+      <p>Strukturierter Start: Sozialisation, Orientierung, Ruhe & sicherer Rückruf – mit klaren, kurzen Übungsschritten.</p>
+      <span class="cta">Zu den Details</span>
+    </a>
+
+    <a class="service-card" href="leistungen/junghunde.html">
+      <h3>Junghundetraining</h3>
+      <p>Pubertät gelassen meistern: Impulskontrolle, entspannte Begegnungen und stabile Signale im Stadtalltag.</p>
+      <span class="cta">Zu den Details</span>
+    </a>
+
+    <a class="service-card" href="leistungen/einzeltraining.html">
+      <h3>Einzeltraining (mobil)</h3>
+      <p>Analyse vor Ort & maßgeschneiderter Plan – wir trainieren dort, wo Verhalten entsteht: Zuhause, Straße, Park.</p>
+      <span class="cta">Zu den Details</span>
+    </a>
+
+    <a class="service-card" href="leistungen/gruppenkurse.html">
+      <h3>Gruppenkurse & 10er-Block</h3>
+      <p>Mit sinnvoller Ablenkung üben, Signale festigen und dranbleiben – flexibel & mit Preisvorteil im Block.</p>
+      <span class="cta">Zu den Details</span>
+    </a>
+
+    <a class="service-card" href="leistungen/alltagstraining.html">
+      <h3>Alltagstraining</h3>
+      <p>Ruhige Leinenführung, Begegnungen managen, Stadtreize – mit Ritualen, die Spaziergänge planbar machen.</p>
+      <span class="cta">Zu den Details</span>
+    </a>
+
+    <a class="service-card" href="leistungen/verhaltensberatung.html">
+      <h3>Verhaltensberatung</h3>
+      <p>Angst, Stress oder Aggression: sorgfältige Anamnese, Management & kleinschrittiges Training – freundlich & messbar.</p>
+      <span class="cta">Zu den Details</span>
+    </a>
+  </div>
+
+  <p style="text-align:center;margin-top:16px" class="fx-reveal">
+    <a class="cta-primary" href="kontakt.html#formular">Kostenloses Erstgespräch</a>
+    <a class="cta" href="gutscheine.html">10er-Block sichern</a>
+  </p>
+</section>
+
+    <!-- Prozess -->
+    <section class="wrapper section-narrow">
+      <header class="section-head fx-reveal">
+        <h2>So arbeiten wir</h2>
+        <p class="section-desc">Transparenter Ablauf – damit du weißt, was wann passiert.</p>
+      </header>
+      <div class="timeline fx-reveal">
+        <div class="step" data-step="1"><h3>Erstgespräch</h3><p>Kostenfrei & unverbindlich – Ziele, Alltag, Terminlage.</p></div>
+        <div class="step" data-step="2"><h3>Analyse & Plan</h3><p>Kurz & klar: Trainingsplan, Tools, Übungsorte.</p></div>
+        <div class="step" data-step="3"><h3>Training</h3><p>Mobil & alltagstauglich – kleine Schritte, echte Fortschritte.</p></div>
+        <div class="step" data-step="4"><h3>Dranbleiben</h3><p>10er-Block oder flexible Einheiten, Feedback & Anpassung.</p></div>
+      </div>
+    </section>
+
+    <!-- KPIs -->
+    <section class="wrapper section-narrow fx-reveal">
+      <div class="kpis">
+        <div class="kpi"><div class="num" data-count="250">0</div><div class="small">+ Teams begleitet</div></div>
+        <div class="kpi"><div class="num" data-count="1200">0</div><div class="small">+ Trainingseinheiten</div></div>
+        <div class="kpi"><div class="num" data-count="98">0</div><div class="small">% empfehlen uns weiter</div></div>
+        <div class="kpi"><div class="num" data-count="10">0</div><div class="small">Trainer:innen-Jahre</div></div>
+      </div>
+    </section>
+
+    <!-- Blog Teaser -->
+    <section class="wrapper section">
+      <header class="section-head fx-reveal">
+        <h2>Aus dem Magazin</h2>
+        <p class="section-desc">Praxisnah & modern: Training, das wirkt.</p>
+      </header>
+      <div class="teaser-grid fx-reveal">
+        <a class="teaser" href="blog/posts/welpentraining-graz.html"><h3>Welpentraining – der Start</h3><p>Kleine Schritte, große Wirkung.</p><span class="cta">Lesen</span></a>
+        <a class="teaser" href="blog/posts/leinenfuehrigkeit-graz.html"><h3>Leinenführigkeit – entspannt unterwegs</h3><p>Orientierung, Timing & Management.</p><span class="cta">Lesen</span></a>
+        <a class="teaser" href="blog/posts/hund-und-kinder.html"><h3>Hund & Kinder – sicher im Alltag</h3><p>Rituale & Regeln, die tragen.</p><span class="cta">Lesen</span></a>
+      </div>
+    </section>
+
+    <!-- Testimonials Slider -->
+    <section class="wrapper section-narrow">
+      <header class="section-head fx-reveal">
+        <h2>Erfahrungen</h2>
+        <p class="section-desc">Kurz & ehrlich – direkt aus dem Alltag.</p>
+      </header>
+      <div class="slider fx-reveal">
+        <div class="slide-track">
+          <figure class="slide"><blockquote class="testi-quote">„Ruhige Anleitung, klare Schritte – Spaziergänge sind wieder entspannt.“</blockquote><figcaption class="small">Anna K., Eggenberg</figcaption></figure>
+          <figure class="slide"><blockquote class="testi-quote">„Der 10er-Block hat Struktur reingebracht. Fips arbeitet gern mit.“</blockquote><figcaption class="small">Brigitte M., Wetzelsdorf</figcaption></figure>
+          <figure class="slide"><blockquote class="testi-quote">„Nach drei Einheiten zieht mein Schäfermix kaum noch.“</blockquote><figcaption class="small">Markus P., Gratkorn</figcaption></figure>
+        </div>
+      </div>
+      <div class="slider-controls"><button id="sl-prev" aria-label="zurück">‹</button><button id="sl-next" aria-label="weiter">›</button></div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="wrapper section-narrow fx-reveal">
+      <div class="card" style="max-width:620px;margin:0 auto;text-align:center">
+        <h2 style="margin-top:0">Newsletter: Exklusive Angebote &amp; Tipps für Fellnasen</h2>
+        <p>Kurz, praxisnah und selten: Trainingsideen, Kurs-News und Aktionen. Du kannst dich jederzeit abmelden.</p>
+        <form method="post" action="mailto:kevin.pirker10@gmail.com" enctype="text/plain" style="display:flex;flex-direction:column;gap:10px;margin-top:12px">
+          <label for="news-email" class="visually-hidden">E-Mail-Adresse</label>
+          <input id="news-email" name="email" type="email" required placeholder="deine@email.at" autocomplete="email" spellcheck="false" style="padding:.7rem .9rem;border:1px solid var(--border);border-radius:10px">
+          <button class="cta-primary" type="submit">Jetzt anmelden</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Standort & Kontakt-Short -->
+    <section class="wrapper section" id="anfahrt" aria-labelledby="h-anfahrt">
+      <h2 id="h-anfahrt" class="fx-reveal" style="text-align:center">Standort &amp; Anfahrt</h2>
+      <p class="fx-reveal" style="text-align:center">Wienerstraße 205, 8010 Graz – Hundetrainingsgelände & mobile Termine.</p>
+      <div class="grid grid-3 fx-reveal" style="align-items:stretch">
+        <article class="card"><h3 style="margin-top:0">Adresse & Kontakt</h3><address style="font-style:normal;line-height:1.6"><strong>Kevin’s Hundeschule Graz</strong><br>Wienerstraße&nbsp;205<br>8010&nbsp;Graz, Österreich<br>Tel.&nbsp;<a href="tel:+436649260727">+43&nbsp;664&nbsp;9260727</a><br>E-Mail&nbsp;<a href="mailto:kevin.pirker10@gmail.com">kevin.pirker10@gmail.com</a></address><p style="margin-top:10px"><a class="cta" href="https://www.google.com/maps/dir/?api=1&destination=Wienerstraße+205,+8010+Graz" target="_blank" rel="noopener">Route in Google&nbsp;Maps</a></p></article>
+        <article class="card"><h3 style="margin-top:0">Öffnungszeiten</h3><ul style="list-style:none;padding:0;margin:0;line-height:1.9"><li><strong>Mo–Fr:</strong> 08:00–18:00</li><li><strong>Sa:</strong> 08:00–13:00</li><li><strong>So/Feiertag:</strong> geschlossen</li></ul><p class="small" style="margin-top:10px">Termine nach Vereinbarung · Mobile Einheiten möglich.</p></article>
+        <article class="card"><h3 style="margin-top:0">Karte</h3><div style="border-radius:14px;overflow:hidden;box-shadow:0 6px 16px rgba(0,0,0,.06)"><iframe src="https://www.google.com/maps?q=Wienerstraße+205,+8010+Graz&output=embed" width="100%" height="320" style="border:0" loading="lazy" allowfullscreen title="Karte: Kevin’s Hundeschule Graz"></iframe></div></article>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="wrapper section">
+      <h2 class="fx-reveal" style="text-align:center">Bereit für entspannte Spaziergänge?</h2>
+      <p class="fx-reveal" style="text-align:center">Starte mit einem kostenlosen Erstgespräch – wir finden das passende Format.</p>
+      <p class="fx-reveal" style="text-align:center">
+        <a class="cta-primary" href="kontakt.html#formular">Erstgespräch anfragen</a>
+        <a class="cta" href="gutscheine.html">Gutschein verschenken</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="wrapper" role="contentinfo">
+    <small>© 2025 Kevin’s Hundeschule Graz · <a href="impressum.html">Impressum</a> · <a href="agb.html">AGB</a> · <a href="datenschutz.html">Datenschutz</a></small>
+  </footer>
+
+  <script>
+    // Header scroll state
+    (function(){
+      const header = document.querySelector('.site-header');
+      function onScroll(){ if(!header) return; if(window.scrollY>4) header.classList.add('scrolled'); else header.classList.remove('scrolled'); }
+      onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+    })();
+
+    // Hamburger
+    (function(){
+      const btn = document.querySelector('.menu-toggle');
+      const menu = document.getElementById('quick-menu');
+      if(!btn || !menu) return;
+      btn.addEventListener('click', ()=>{
+        const open = !menu.hasAttribute('hidden');
+        if(open){ menu.setAttribute('hidden',''); btn.setAttribute('aria-expanded','false'); }
+        else { menu.removeAttribute('hidden'); btn.setAttribute('aria-expanded','true'); }
+      });
+      document.addEventListener('click', (e)=>{ if(!menu.contains(e.target) && !btn.contains(e.target)) menu.setAttribute('hidden',''); });
+    })();
+
+    // Reveal on scroll
+    (function(){
+      const els = document.querySelectorAll('.fx-reveal');
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target);} });
+      }, {threshold:.15});
+      els.forEach(el=>io.observe(el));
+    })();
+
+    // Slider
+    (function(){
+      const slider = document.querySelector('.slider'); if(!slider) return;
+      const track = slider.querySelector('.slide-track'); const slides = Array.from(slider.querySelectorAll('.slide'));
+      const prev = document.getElementById('sl-prev'); const next = document.getElementById('sl-next'); let i=0;
+      function update(){ const w = slides[0]?.offsetWidth||320; track.style.transform = `translateX(${-i*(w+16)}px)`; }
+      prev && prev.addEventListener('click', ()=>{ i=Math.max(0,i-1); update(); });
+      next && next.addEventListener('click', ()=>{ i=Math.min(slides.length-1,i+1); update(); });
+      window.addEventListener('resize', update); update();
+    })();
+
+    // KPI counters
+    (function(){
+      const els = document.querySelectorAll('[data-count]'); if(!els.length) return;
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if(!e.isIntersecting) return;
+          const el=e.target; const target=Number(el.getAttribute('data-count'))||0; const dur=900; const start=performance.now();
+          function tick(t){ const p=Math.min(1,(t-start)/dur); el.textContent=Math.round(target*p).toLocaleString('de-AT'); if(p<1) requestAnimationFrame(tick); }
+          requestAnimationFrame(tick); io.unobserve(el);
+        });
+      },{threshold:.4});
+      els.forEach(el=>io.observe(el));
+    })();
+  </script>
+</body>
+</html>
