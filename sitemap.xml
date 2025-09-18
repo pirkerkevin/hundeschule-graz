@@ -1,56 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Hauptseiten -->
   <url>
-    <loc>https://pirkerkevin.github.io/hundeschule-graz/</loc>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/welpentraining.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/junghunde.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/einzeltraining.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/verhaltensberatung.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/alltagstraining.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/gruppenkurse.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pirkerkevin.github.io/hundeschule-graz/blog/</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pirkerkevin.github.io/hundeschule-graz/faq.html</loc>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/blog/posts/welpentraining-graz.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pirkerkevin.github.io/hundeschule-graz/ueber-uns/</loc>
-  </url>
-  <url>
-    <loc>https://pirkerkevin.github.io/hundeschule-graz/kontakt.html</loc>
-  </url>
-  <url>
-    <loc>https://pirkerkevin.github.io/hundeschule-graz/gutscheine.html</loc>
-  </url>
-  <url>
-    <loc>https://pirkerkevin.github.io/hundeschule-graz/shop/cart.html</loc>
-  </url>
-
-  <!-- Blogposts -->
-  <url>
-    <loc>https://pirkerkevin.github.io/hundeschule-graz/blog/posts/welpentraining-graz-leitfaden.html</loc>
-  </url>
-  <url>
-    <loc>https://pirkerkevin.github.io/hundeschule-graz/blog/posts/leinenfuehrigkeit-graz-routen.html</loc>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/blog/posts/leinenfuehrigkeit-graz.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pirkerkevin.github.io/hundeschule-graz/blog/posts/hundespaziergaenge-graz.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pirkerkevin.github.io/hundeschule-graz/blog/posts/hund-und-kinder.html</loc>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/blog/posts/verhaltensberatung-graz.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pirkerkevin.github.io/hundeschule-graz/blog/posts/tierarzttraining.html</loc>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/ueber-uns/</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-
-  <!-- Leistungsseiten -->
-  <url><loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/welpentraining.html</loc></url>
-  <url><loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/junghunde.html</loc></url>
-  <url><loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/einzeltraining.html</loc></url>
-  <url><loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/gruppenkurse.html</loc></url>
-  <url><loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/alltagstraining.html</loc></url>
-  <url><loc>https://pirkerkevin.github.io/hundeschule-graz/leistungen/verhaltensberatung.html</loc></url>
-
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/shop/cart.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/impressum.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/datenschutz.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/agb.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/faq.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/gutscheine.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pirkerkevin.github.io/hundeschule-graz/kontakt.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
